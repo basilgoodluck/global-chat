@@ -1,14 +1,29 @@
 import { createTheme } from '@mui/material/styles';
 
-// Custom colors (replace with any colors you liked earlier)
+declare module '@mui/material/styles' {
+  interface TypeText {
+    title?: string;
+  }
+
+  interface Palette {
+    text: TypeText;
+  }
+
+  interface PaletteOptions {
+    text?: Partial<TypeText>;
+  }
+}
+
 const colors = {
-  primary: '#4CAF50',  // Cool green
-  secondary: '#FFC107', // Warm yellow
-  background: '#F4F5F7', // Light background
-  surface: '#FFFFFF',   // White for card-like surfaces
-  textPrimary: '#333333', // Dark gray
-  textSecondary: '#757575', // Medium gray
-  accent: '#FF5722', 
+  primary: '#d0ffbf', 
+  secondary: '#f2c79b', 
+  background: '#f7dbd7', 
+  surface: '#ffffff',  
+  textPrimary: '#151714', 
+  textSecondary: '#1c3b11',
+  accent: '#fc44b3', 
+  transparent: 'transparent',
+  title: '#df5eff',
 };
 
 const Theme = createTheme({
@@ -26,18 +41,22 @@ const Theme = createTheme({
     text: {
       primary: colors.textPrimary,
       secondary: colors.textSecondary,
+      title: colors.title
     },
     error: {
-      main: '#F44336', // Error red
+      main: '#F44336', 
     },
     warning: {
-      main: colors.accent, // Accent color for warnings
+      main: colors.accent,
     },
   },
   typography: {
+    allVariants: {
+      textAlign: "start"
+    },
     fontFamily: 'Roboto, Arial, sans-serif',
     h1: {
-      fontSize: '2.5rem',
+      fontSize: '4.5rem',
       fontWeight: 600,
     },
     h2: {
@@ -51,4 +70,4 @@ const Theme = createTheme({
   },
 });
 
-export default Theme
+export default Theme;

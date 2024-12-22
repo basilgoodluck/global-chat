@@ -1,7 +1,24 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "target": "ESNext",                      // Use the latest ECMAScript features
+    "lib": ["DOM", "DOM.Iterable", "ESNext"], // Include DOM and modern JS libraries
+    "allowJs": true,                        // Allow JavaScript files in the project
+    "skipLibCheck": true,                   // Skip type checks for libraries
+    "esModuleInterop": true,                // Support default imports
+    "allowSyntheticDefaultImports": true,   // Allow default imports for all modules
+    "strict": true,                         // Enable strict type-checking
+    "forceConsistentCasingInFileNames": true, // Enforce consistent file casing
+    "module": "ESNext",                     // Use modern JavaScript module syntax
+    "moduleResolution": "Node",            // Use Node.js module resolution
+    "resolveJsonModule": true,              // Allow importing JSON modules
+    "isolatedModules": true,                // Ensure each file acts as its own module
+    "jsx": "react-jsx",                     // Use the modern React JSX transform
+    "noEmit": true,                         // Prevent emitting compiled JavaScript
+    "baseUrl": "./",                        // Define the base path for module resolution
+    "paths": {
+      "@/*": ["src/*"]                      // Define alias @ for the src directory
+    }
+  },
+  "include": ["src"],                       // Include all files in the src folder
+  "exclude": ["node_modules", "dist"]       // Exclude build output and dependencies
 }
