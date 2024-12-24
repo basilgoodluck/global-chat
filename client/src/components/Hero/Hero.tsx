@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
       <Box
         sx={{
           textAlign:'center',
-          padding:'5rem 0'
+          padding:'5rem 0',
         }}
       >
         <Typography 
@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
             fontSize:'3.5rem'
           }}
         >
-          Connect instantly with anyone, anywhere
+          Connect instantly <br /> with anyone, anywhere
         </Typography>
         <Typography 
           variant='body1' 
@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
             color:'#ddd'
           }}
         >
-          Our chat app offers real-time messaging, seamless communication, and a user-friendly experience. Start chatting today and stay connected with your world.
+          Our chat app offers real-time messaging,  seamless communication, and a user-friendly experience. <br /> Start chatting today and stay connected with your world.
         </Typography>
       </Box>
     </>
