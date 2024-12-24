@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { NotificationContext } from "./Notifications";
 
 interface Notification {
@@ -7,7 +7,9 @@ interface Notification {
 };
 
 
-const NotificationContextProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const NotificationContextProvider: React.FC<{ 
+    children: React.ReactNode 
+}> = ({ children }) => {
     const [notification, setNotificationState] = useState<Notification | null>(null);
     
     const setNotification = (newNotification: Notification) => {

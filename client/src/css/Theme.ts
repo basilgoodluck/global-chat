@@ -3,6 +3,7 @@ import { createTheme } from '@mui/material/styles';
 declare module '@mui/material/styles' {
   interface TypeText {
     title?: string;
+    white?: string
   }
 
   interface Palette {
@@ -17,13 +18,14 @@ declare module '@mui/material/styles' {
 const colors = {
   primary: '#d0ffbf', 
   secondary: '#f2c79b', 
-  background: '#f7dbd7', 
-  surface: '#ffffff',  
+  backgroundPrimary: '#f035be', 
+  backgroundSecondary: '#151714', 
+  surface: '#3455eb',  
   textPrimary: '#151714', 
-  textSecondary: '#1c3b11',
+  textSecondary: '#fff',
   accent: '#fc44b3', 
   transparent: 'transparent',
-  title: '#df5eff',
+  title: '#3455eb',
 };
 
 const Theme = createTheme({
@@ -35,13 +37,14 @@ const Theme = createTheme({
       main: colors.secondary,
     },
     background: {
-      default: colors.background,
-      paper: colors.surface,
+      default: colors.backgroundPrimary,
+      paper: colors.backgroundSecondary,
     },
     text: {
       primary: colors.textPrimary,
       secondary: colors.textSecondary,
-      title: colors.title
+      title: colors.title,
+      white: colors.surface
     },
     error: {
       main: '#F44336', 
@@ -56,6 +59,7 @@ const Theme = createTheme({
     },
     fontFamily: 'Roboto, Arial, sans-serif',
     h1: {
+      fontFamily: '"Dancing Script", serif',
       fontSize: '4.5rem',
       fontWeight: 600,
     },
