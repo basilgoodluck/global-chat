@@ -15,7 +15,7 @@ const RegisterBTN: React.FC<RegisterBTNProps> = ({ children, func }) => {
         width: '200px',
         height: '100px',
         backgroundColor: 'background.paper',
-        borderRadius: '50%',
+        borderRadius: '3rem',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
